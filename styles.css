@@ -271,6 +271,9 @@ nav {
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
+.help-item h3{
+    text-decoration: underline;
+}
 
 .help-item img{
     width: 50%;

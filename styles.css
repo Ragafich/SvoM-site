@@ -131,7 +131,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('img/headder-dec.jpg');
+    background-image: url('img/headder-25112025.jpg');
     background-size: cover;
     background-position: center;
     z-index: -2;
@@ -143,7 +143,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6); /* Увеличьте прозрачность для большей контрастности */
     z-index: -1;
 }
 
@@ -494,6 +494,27 @@ footer {
     }
 }
 
+/* Обновленные стили для заглавного текста в секции hero */
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.7),  /* Основная тень */
+        0 4px 8px rgba(0, 0, 0, 0.5),  /* Более мягкая тень */
+        0 6px 12px rgba(0, 0, 0, 0.3); /* Самая легкая тень */
+    /* Можно добавить белую обводку для дополнительного контраста */
+    /* -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.3); */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.7),  /* Основная тень */
+        0 4px 8px rgba(0, 0, 0, 0.5),  /* Более мягкая тень */
+        0 6px 12px rgba(0, 0, 0, 0.3); /* Самая легкая тень */
+}
 
 
 /* fonts */

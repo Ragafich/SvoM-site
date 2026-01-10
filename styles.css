@@ -408,7 +408,7 @@ nav {
 
 /* Секция "Контакты" */
 .contact {
-    background-color: #503d2c;
+    background:  linear-gradient(to right, #3d2e1a 0%, #5c4a2a 100%);
     color: white;
 }
 
@@ -464,12 +464,7 @@ nav {
 }
 
 /* Футер */
-footer {
-    background-color: #1b1201;
-    color: white;
-    text-align: center;
-    padding: 30px 0;
-}
+
 
 /* Адаптивность */
 @media (max-width: 768px) {
@@ -869,8 +864,8 @@ footer {
             padding: 30px;
             background: linear-gradient(135deg, #3d2e1a 0%, #5c4a2a 100%);
             color: #f0e6d8;
-            border-radius: 20px 20px 0 0;
-            margin-top: 50px;
+            /* border-radius: 20px 20px 0 0; */
+            /* margin-top: 50px; */
         }
         
         .contact-info {

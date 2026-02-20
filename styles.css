@@ -119,10 +119,11 @@ nav {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: center; /* Центрирует .hero-content по горизонтали */
+    text-align: center;      /* Центрирует текст и inline-элементы внутри */
     color: white;
     margin-top: 70px;
+    width: 100%;             /* Гарантируем полную ширину */
 }
 
 .hero-image {
@@ -146,22 +147,38 @@ nav {
     background-color: rgba(0, 0, 0, 0.6); /* Увеличьте прозрачность для большей контрастности */
     z-index: -1;
 }
-
+/* Контент внутри Hero */
 .hero-content {
     max-width: 800px;
+    width: 100%;             /* Важно для корректной работы margin: 0 auto */
     padding: 0 20px;
+    margin: 0 auto;          /* Основное свойство для горизонтального центрирования блока */
+    display: flex;           /* Используем Flexbox для внутреннего выравнивания */
+    flex-direction: column;  /* Элементы друг под другом */
+    align-items: center;     /* Центрирует элементы внутри .hero-content */
 }
-
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-align: center;      /* Явное центрирование текста */
+    width: 100%;             /* Занимает всю доступную ширину */
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.7),
+        0 4px 8px rgba(0, 0, 0, 0.5),
+        0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* Текст внутри Hero */
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 30px;
+    text-align: center;      /* Явное центрирование текста */
+    width: 100%;
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.7),
+        0 4px 8px rgba(0, 0, 0, 0.5),
+        0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .btn {
@@ -517,6 +534,18 @@ nav {
     font-family: 'Source Sans 3';
     src: url('fonts/SourceSans3-VariableFont_wght.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'AmadeusAP';
+    src: url('fonts/ofont.ru_AmadeusAP.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Snell Roundhand';
+    src: url('fonts/ofont.ru_Snell Roundhand.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Source Sans 3 italic';
+    src: url('fonts/SourceSans3-LightItalic.ttf') format('truetype');
+}
 
 .source-sans-3-light {
   font-family: "Source Sans 3", sans-serif;
@@ -526,6 +555,24 @@ nav {
 }
 .source-sans-3-regular {
   font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.source-sans-3-light-italic {
+  font-family: "Source Sans 3 italic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+.amadeusap-regular {
+  font-family: "AmadeusAP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.snell-roundhand-regular {
+  font-family: "Snell Roundhand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -727,12 +774,14 @@ nav {
             font-size: 1.8rem;
             margin-bottom: 10px;
             color: #fff;
+            white-space: nowrap;
         }
         
         .tariff-subtitle {
             font-size: 1rem;
             opacity: 0.95;
             font-weight: 300;
+            
         }
         
         .tariff-body {
